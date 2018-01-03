@@ -1,50 +1,31 @@
-![](http://rentinginla.com/wp-content/uploads/2015/12/Buying.jpg)
-# [Project 2: Predicting House Prices with Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data)
+This project looks at the different features of a home to see how the features impact the selling price of house. Some of features included the type of house it was, the square footage of the basement, the kind of garage and more. Looking at the the data, there was a lot of EDA that needed to be done. Not all of the houses had all the features. Also there were a bunch of categorical features that needed to be changed to numerical values in order to be analyzied. 
 
-The goal of this project is for you to use EDA, visualization, data cleaning, preprocesing, and linear models to predict home prices given the features of the home, and interpret your linear models to find out what features add value to a home! This project is a bit more open-ended than project 1. 
+After the EDA was completed I took those features and ran linear models on the data in order to see how those features impacting the saleprcing of the house. I found the best model out of the three to then take that model to select the top ten features that affected the selling price the most. 
 
-Be sure to ...
+These features that were the top ten highest scoring features that impacted a housing selling price, can then be used to focus on future house and their selling prices. For example, if the basement type has a lot of square footage in the basement then the it will sell well at a higher price. Alterately if the house is in the neighborhood of Old Town or Edwards then the chance of selling it at higher price will be a lot lower. 
 
-* Think about your choices when it comes to your choices about the data. Be ready to defend your decisions!
-* Use lots of plots to dig deeper into the data! Describe the plots and convey what you learned from them.
-* Don't forget to read the [description of the data](https://storage.googleapis.com/kaggle-competitions-data/kaggle/5407/data_description.txt?GoogleAccessId=competitions-data@kaggle-161607.iam.gserviceaccount.com&Expires=1507575962&Signature=HUgKXCr3TOJMcb%2BGgbwFR4HGS7joOdSr0aO49X4453i2Y4LPFC2imccd%2BS2bzYMtUOqZSRW%2FNOGTwv5hI07%2FvXdFrgnnlyMz1l548aLi0Otg0jzIa11YXymXX4801QaoQmhMJV6ko0ycMJx5y00zSn8lOFNxVARz3aNNl6L8GKkodLITzAy72uPyCXS1iMuPFbmxdVbhYaO6OiKYh%2BDx%2Ftf2z9w3KSm5OGZacRcoxuYCnpZL6PpbG67hzaF21Vh9%2FV%2BrgEoEI0cL%2BKvwIUo5GcTGu0jmsixFx5JyHFZba6l5gDNRlT%2BIHEpjFAtHHrMEdTSzzlWSR2cEqig5WBsmXg%3D%3D) at the kaggle website! This has valuable information that will help you clean and impute data. `NaN` means something in many of the columns! Don't just drop or fill them!
-* Try fitting many models! Document your work and note what you've tried.
-* Apply what you've learned in class, books, videos, and blog posts.
+The features that add the most to the value of a home in descending order:
 
-
-From the Kaggle competition website:
-
-    Ask a home buyer to describe their dream house, and they probably won't begin with the height of the basement ceiling or the proximity to an east-west railroad. But this playground competition's dataset proves that much more influences price negotiations than the number of bedrooms or a white-picket fence.
-
-    With 79 explanatory variables describing (almost) every aspect of residential homes in Ames, Iowa, this competition challenges you to predict the final price of each home.
+    the basement type square footage,
+    2nd floor square footage,
+    1st floor square footage,
+    overall quality,
+    garage that is in typical or average condition,
+    gargage that is excellent condition,
+    lot area,
+    pool quality that is in good condition,
+    Single-family Detached house,
+    and year built.
     
+The features that have the least impact on the SalePrice in descending order are:
 
-## Project Details:
-
-#### Submission:
-
-* Assigned: Tuesday, 10/10/2017
-* Project Due Date: Friday, 10/20/2017 (Submission form [here](https://goo.gl/forms/HJhO3VLMByrHHZWJ2))
-* Self-Evaluation Due Date: Sunday, 10/22/2017 (Submission form [here](https://goo.gl/forms/b62WzAYbTQIqyPsB3))
-
-#### Working on the Project:
-
-* You should be working on a **fork** of the GA project one repository. 
-* Use **git** to manage versions of your project. Make sure to `add`, `commit`, and `push` your changes to **your fork** of the github 
-
-
-## Considerations:
-
-* You will be generating long data strutures- avoid displaying the whole thing. Display just the first or last few entries and look at the length or shape to check whether your code gives you back what you want and expect.
-* Make functions whenever possiblle!
-* Be explicit with your naming. You may forget what `this_list` is, but you will have an idea of what `passenger_fare_list` is. Variable naming will help you in the long run!
-* Don't forget about tab autocomplete!
-* Use markdown cells to document your planning, thoughts, and results. 
-* Delete cells you will not include in your final submission
-* Try to solve your own problems using this framework:
-  1. Check your spelling
-  2. Google your errors. Is it on stackoverflow?
-  3. Ask your classmates
-  4. Ask a TA or instructor
-* Do not include errors or stack traces (fix them!)
-
+    neighborhood - Edwards,
+    neighborhood - Old Town,
+    slope of property that is serve,
+    Fuse Box over 60 AMP and all Romex wiring (Average),
+    garage that is in excellent condition,
+    pool area square footage,
+    electrical system that is Standard Circuit Breakers & Romex,
+    a house near positive off-site feature--park, greenbelt, etc.,
+    the year the garage was built,
+    and if the roofing material is clay or title.
